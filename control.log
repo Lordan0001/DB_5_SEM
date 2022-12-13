@@ -1,0 +1,33 @@
+
+SQL*Loader: Release 19.0.0.0.0 - Production on Tue Dec 13 03:09:08 2022
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   control.ctl
+Data File:      .\import_data.txt
+  Bad File:     import_data.bad
+  Discard File: .\import_data.dis 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table LAB188, loaded from every logical record.
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+ID                                  FIRST     *   ,       CHARACTER            
+    SQL string for column : "round(:id, 2)"
+TEXT                                 NEXT     *   ,       CHARACTER            
+    SQL string for column : "upper(:text)"
+DATE_VALUE                           NEXT     *   ,       DATE DD.MM.YYYY      
+
+SQL*Loader-941: Error during describe of table LAB188
+ORA-04043: object LAB188 does not exist
+
